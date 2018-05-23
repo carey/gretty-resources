@@ -1,0 +1,14 @@
+plugins {
+    id 'war'
+}
+
+apply plugin: 'org.gretty'
+
+dependencies {
+    implementation project(':lib')
+    providedCompile 'javax.servlet:javax.servlet-api:3.0.1'
+}
+
+gretty {
+    servletContainer = 'jetty9.4'
+}
